@@ -1,0 +1,779 @@
+<p>
+    <style type="text/css">
+                            #header-breadcrumb-container h1{
+                                margin-bottom: -7px !important;
+                            }
+                            #container.content-page-container {max-width: 100%}
+                            #main-content h1, #main-content h2, #main-content h3, #main-content h4, #main-content h5, #main-content h6, #main-content p {
+                                font-family: Roboto,Arial,Helvetica,sans-serif;
+                            }
+                            #main-content{
+                                margin-top: 20px;
+                            }
+                            p, .content {margin-bottom: 0}
+    
+                            /* Grid */
+                            [id*="markRow-"] {padding: 0px}
+                            [id*="markRow-"]::after {
+                                content: "";
+                                clear: both;
+                                display: table;
+                            }
+                            [class*="markCol-"] {float: left; padding: 0;}
+                            .markCol-1 {width: 33.33%;}
+                            .markCol-2 {width: 47.6%;}
+                            .keepstock-5col-hack {width: 47.6%}
+                            .markCol-3 {width: 47.6%;}
+                            .markCol-4 {width: 47.6%;}
+                            .markCol-5 {width: 47.6%;}
+                            .markCol-6 {width: 47.6%;}
+                            .markCol-7 {width: 100%;}
+                            .markCol-8 {width: 100%;}
+                            .markCol-9 {width: 100%;}
+                            .markCol-10 {width: 100%;}
+                            .markCol-11 {width: 100%;}
+                            .markCol-12 {width: 100%;}
+    
+                            /*Clears*/
+                            .keepClear {margin: 0;height: 0;padding: 0;clear: both}
+                            .keepstock-PadClear-top {padding-top: 0 !important}
+                            .keepstock-PadClear-bottom {padding-bottom: 0 !important}
+    
+                            h1.keepstock-headL {font-size: 28px; line-height: 34px; padding-bottom: 8px; margin: 0}
+                            h2.keepstock-headM {font-size: 20px; line-height: 26px; padding-bottom: 8px; margin: 0}
+                            h3.keepstock-headS {font-size: 18px; line-height: 24px; padding-bottom: 8px; margin: 0}
+                            .keepstock-headPad {padding-left: 8px}
+                            p.keepstock-bodyL {font-size: 16px; line-height: 20px; margin: 0}
+                            p.keepstock-bodyM {font-size: 14px; line-height: 18px; margin: 0}
+                            p.keepstock-bodyS {font-size: 12px; line-height: 16px; margin: 0}
+                            .keepstock-whiteCopy {color: #ffffff}
+                            .keepstock-ctaPad-card {padding-bottom: 16px}
+    
+                            /*hero Banner*/
+                            .keepstock-section-hero {width: 100%;height:250px; min-width: 700px; background-size: cover; background-position: center; background-repeat: no-repeat; margin-top: -10px}
+                            .keepstock-hero {width: 700px; height:250px; padding: 40px 15px; margin:0 auto;}
+                            .keepstock-bread {color: #FFFFFF; padding-left: 11%; font-size: 10px; margin-bottom: 16px}
+                            .keepstock-bread a {color: #10acd2; text-decoration: none}
+                            .keepstock-hero-messageFrame {width: 300px}
+                            .keepstock-header-title {padding-left: 5px; width: 88%; float: left}
+                            .keepstock-hero h1.heroTitle {color: #ffffff; font-size: 37px; line-height: 35px; font-weight: bold; margin: 0}
+                            .keepstock-header-icon {float: left; width: 9%; position: relative}
+                            .keepstock-header-icon img {width: 100%;  position: absolute; top: 5px}
+                            .keepstock-header-logo img {width:100%}
+                            h2.heroSubTitle {color: #ffffff; font-size: 18px; font-weight:500; margin:10px 0}
+                            p.heroCopy {color: #ffffff; font-size: 11px; font-weight:300; margin:10px 0 15px 0}
+                            .keepstock-hero-break {width: 100%; height:3px; background-color: #be2122; margin-top: 5px}
+    
+                            /* Section Containers */
+                            .keepstock-headM img {width: 25px; margin-right: 8px}
+                            .keepstock-sectionHeader-copy {margin-bottom: 15px}
+                            .keepstock-graySection {background-color: #eeeeee; width: 100%; min-width: 716px}
+                            .keepstock-section-full {width: 100%; padding: 16px 0 32px 0; margin:0 auto}
+                            .keepstock-section-full-noBox {width: 100%; padding: 16px 8px 32px 8px; margin:0 auto}
+                            .keepstock-section-flex {display: flex; flex-wrap: wrap;}
+                            .keepstock-section-flexCenter {display: flex; align-items: center;}
+                            .keepstock-seo-red {color: #be2122; font-weight: bold}
+                            .keepstock-iconCard-content {padding: 24px}
+                            .keepstock-iconCard-content img {width: 50%; margin-bottom: 10px}
+                            .keepstock-iconCard-textLeft {text-align: left}
+                            .keepstock-card-white {background-color: #ffffff; margin: 8px}
+                            .keepstock-card-image {width: 100%}
+                            .keepstock-card-content {padding: 16px 24px}
+                            .keepstock-card-icon {width: 12%; float: left; margin-right: 8px}
+                            .keepstock-card-titleBox p {padding-bottom: 8px; margin: 0; line-height: 12px}
+                            .keepstock-card-titleBox h3 {padding-bottom: 0; margin: 0}
+                            .keepstock-card-titleBox {width: 100%; float: left; margin-bottom: 8px}
+                            .keepstock-cardComplex-white {background-color: #ffffff; margin: 8px}
+    
+                            @media only screen and (min-width: 769px) {
+                                .markCol-1 {width: 8.33%;}
+                                .markCol-2 {width: 16.66%;}
+                                .keepstock-5col-hack {width: 18.25%}
+                                .markCol-3 {width: 23.25%;}
+                                .markCol-4 {width: 31.58%;}
+                                .markCol-5 {width: 41.66%;}
+                                .markCol-6 {width: 48.25%;}
+                                .markCol-7 {width: 58.33%;}
+                                .markCol-8 {width: 66.66%;}
+                                .markCol-9 {width: 75%;}
+                                .markCol-10 {width: 83.33%;}
+                                .markCol-11 {width: 91.66%;}
+                                .markCol-12 {width: 100%;}
+                                h1.keepstock-headL {font-size: 28px; line-height: 34px; padding-bottom: 8px; margin: 0}
+                                h2.keepstock-headM {font-size: 20px; line-height: 26px; padding-bottom: 8px; margin: 0}
+                                h3.keepstock-headS {font-size: 18px; line-height: 24px; padding-bottom: 8px; margin: 0}
+                                .keepstock-headPad {padding-left: 8px}
+                                p.keepstock-bodyL {font-size: 16px; line-height: 20px; margin: 0}
+                                p.keepstock-bodyM {font-size: 14px; line-height: 18px; margin: 0}
+                                p.keepstock-bodyS {font-size: 12px; line-height: 16px; margin: 0}
+                                .keepstock-whiteCopy {color: #ffffff}
+    
+                                /*hero Banner*/
+                                .keepstock-section-hero {height:300px}
+                                .keepstock-hero {width: 900px; height:300px; margin: 0 auto}
+                                .keepstock-bread {color: #FFFFFF; padding-left: 12%; margin-bottom: 4px}
+                                .keepstock-bread a {color: #10acd2; text-decoration: none}
+                                .keepstock-hero-messageFrame {width: 400px}
+                                .keepstock-header-title {padding-left: 5px; width: 88%; float: left}
+                                .keepstock-hero h1.heroTitle {font-size: 52px; line-height: 48px}
+                                .keepstock-header-icon {float: left; width: 10%; position: relative}
+                                .keepstock-header-icon img {width: 100%;  position: absolute; top: 6px}
+                                h2.heroSubTitle {font-size: 28px; margin:10px 0}
+                                p.heroCopy {font-size: 14px; margin:10px 0 20px 0}
+                                .keepstock-graySection {min-width: 916px}
+                                .keepstock-section-full {width: 100%; padding: 16px 0 32px 0; margin:0 auto}
+                                .keepstock-section-full-noBox {width: 100%; padding: 16px 8px 32px 8px; margin:0 auto}
+                                .keepstock-section-flex {display: flex; flex-wrap: wrap;}
+                                .keepstock-section-flexCenter {display: flex; align-items: center;}
+                                .keepstock-iconCard-content {padding: 24px}
+                                .keepstock-iconCard-content img {width: 100%; margin-bottom: 24px}
+                            }
+    
+                            @media only screen and (min-width: 1200px) {
+                                .keepstock-5col-hack {width: 18.56%}
+                                .markCol-3 {width: 23.56%}  
+                                .markCol-4 {width: 31.86%}
+                                .markCol-6 {width: 48.56%}
+                                h1.keepstock-headL {font-size: 28px; line-height: 34px; padding-bottom: 8px; margin: 0}
+                                h2.keepstock-headM {font-size: 20px; line-height: 26px; padding-bottom: 8px; margin: 0}
+                                h3.keepstock-headS {font-size: 18px; line-height: 24px; padding-bottom: 8px; margin: 0}
+                                .keepstock-headPad {padding-left: 8px}
+                                p.keepstock-bodyL {font-size: 16px; line-height: 20px; margin: 0}
+                                p.keepstock-bodyM {font-size: 14px; line-height: 18px; margin: 0}
+                                p.keepstock-bodyS {font-size: 12px; line-height: 16px; margin: 0}
+                                .keepstock-whiteCopy {color: #ffffff}
+    
+                                /*hero Banner*/
+                                .keepstock-section-hero {height:385px}
+                                .keepstock-hero {width: 1100px; height:385px; margin: 0 auto}
+                                .keepstock-bread {color: #FFFFFF; padding-left: 11.5%; margin-bottom: 16px}
+                                .keepstock-bread a {color: #10acd2; text-decoration: none}
+                                .keepstock-hero-messageFrame {width: 540px}
+                                .keepstock-header-title {padding-left: 5px; width: 88%; float: left}
+                                .keepstock-hero h1.heroTitle {font-size: 69px; line-height: 61px}
+                                .keepstock-header-icon {float: left; width: 10%; position: relative}
+                                .keepstock-header-icon img {width: 100%;  position: absolute; top: 5px}
+                                h2.heroSubTitle {font-size: 32px; line-height: 35px; margin:10px 0}
+                                p.heroCopy {font-size: 16px; line-height: 20px; margin:10px 0 30px 0}
+                                .keepstock-subHead img {width: 35px; margin-right: 10px}
+                                .keepstock-graySection {min-width: 1116px}
+                                .keepstock-section-full {width: 1116px; padding: 24px 0 40px 0; margin:0 auto}
+                                .keepstock-section-full-noBox {width: 1116px; padding: 24px 8px 40px 8px; margin:0 auto}
+                            }
+    
+                            @media only screen and (max-device-width: 480px) {
+                                #container {min-width: 0;padding: 0}
+                                #container.content-page-container {max-width: 100%;margin-top: -10px;padding: 0}
+                                #main-content {width: 100%;padding: 0}
+                                [id*="markRow-"] {padding: 0 5px}
+                                [class*="markCol-"] {
+                                    width: 100%;
+                                    float: left;
+                                    padding: 0px;
+                                }
+                                .keepstock-5col-hack {width: 100%; float:left; padding: 8px}
+                                h1.keepstock-headL {font-size: 28px; line-height: 34px; padding-bottom: 8px; margin: 0}
+                                h2.keepstock-headM {font-size: 20px; line-height: 26px; padding-bottom: 8px; margin: 0}
+                                h3.keepstock-headS {font-size: 18px; line-height: 24px; padding-bottom: 8px; margin: 0}
+                                .keepstock-headPad {padding-left: 8px}
+                                p.keepstock-bodyL {font-size: 16px; line-height: 20px; margin: 0}
+                                p.keepstock-bodyM {font-size: 14px; line-height: 18px; margin: 0}
+                                p.keepstock-bodyS {font-size: 12px; line-height: 16px; margin: 0}
+                                .keepstock-whiteCopy {color: #ffffff}
+    
+                                /*hero Banner*/
+                                .keepstock-section-hero {width: 100%;height:450px; min-width: 100%; background-size: cover; background-position: center; background-repeat: no-repeat; margin-top: -10px}
+                                .keepstock-hero {width: 90%; height:250px; padding: 80px 15px 0 15px; margin:0 auto;}
+                                .keepstock-bread {color: #FFFFFF; padding-left: 11%; font-size: 10px; margin-bottom: 4px}
+                                .keepstock-bread a {color: #10acd2; text-decoration: none}
+                                .keepstock-hero-messageFrame {width: 300px}
+                                .keepstock-header-title {padding-left: 5px; width: 88%; float: left}
+                                .keepstock-hero h1.heroTitle {color: #ffffff; font-size: 37px; line-height: 35px; font-weight: bold; margin: 0}
+                                .keepstock-header-icon {float: left; width: 9%; position: relative}
+                                .keepstock-header-icon img {width: 100%;  position: absolute; top: 5px}
+                                h2.heroSubTitle {color: #ffffff; font-size: 18px; font-weight:300; margin:10px 0}
+                                p.heroCopy {color: #ffffff; font-size: 11px; font-weight:normal; margin:10px 0 15px 0; padding-right: 150px}
+                                .keepstock-hero-break {width: 100%; height:2px; background-color: #be2122}
+                                .keepstock-headM img {width: 25px; margin-right: 8px}
+                                .keepstock-sectionHeader-copy {margin-bottom: 15px}
+                                .keepstock-graySection {background-color: #eeeeee; width: 100%; min-width: 0}
+                                .keepstock-section-full {width: 100%; padding: 16px 0 32px 0; margin:0 auto}
+                                .keepstock-section-full-noBox {width: 100%; padding: 16px 8px 32px 8px; margin:0 auto}
+                                .keepstock-section-flex {display: flex; flex-wrap: wrap;}
+                                .keepstock-section-flexCenter {display: flex; align-items: center;}
+                                .keepstock-section-flexKill {display: block;}
+                                .keepstock-seo-red {color: #be2122; font-weight: bold}
+                                .keepstock-card-white {background-color: #ffffff; margin: 8px;}
+                                .keepstock-card-image {width: 100%}
+                                .keepstock-card-content {padding: 8px}
+                                .keepstock-card-icon {width: 12%; float: left; margin-right: 8px}
+                                .keepstock-card-titleBox p {padding-bottom: 0; margin: 0; line-height: 12px}
+                                .keepstock-card-titleBox h3 {padding-bottom: 0; margin: 0}
+                                .keepstock-card-titleBox {width: 100%; float: left; margin-bottom: 8px}
+                                .keepstock-cardComplex-white {background-color: #ffffff; margin: 8px;}
+                            }
+</style>
+</p>
+
+<p>
+<style type="text/css">.keepstock-section-hero {
+                                width: 100%;
+                                height: 250px;
+                                min-width: 700px;
+                                background-image: url(/medias/sys_master/root/h07/hd2/8962851438622/web-banner.jpg);
+                                background-size: cover;
+                                background-position: center;
+                                background-repeat: no-repeat;
+                                margin-top: -10px
+                            }
+                            .keepstock-hero {
+                                width: 700px;
+                                height: 250px;
+                                padding: 40px 15px;
+                                margin: 0 auto;
+                            }
+                            .keepstock-hero-messageFrame {
+                                width: 300px !important;
+                            }
+                            h2.keepstock-headM {
+                                font-size: 34px !important;
+                                font-weight: bold;
+                                line-height: 36px;
+                                padding-top: 25px;
+                                padding-bottom: 15px;
+                            }
+                            h2.keepstock-headMs {
+                                font-size: 30px !important;
+                                font-weight: bold;
+                                line-height: 34px;
+                            }
+                            h2.heroSubTitle{
+                                font-size: 40px;
+                                margin-bottom: 25px;
+                            }
+                            p.keepstock-bodyM {
+                                font-size: 18px;
+                                line-height: 24px;
+                            }
+                            p.keepstock-bodyM12 {
+                                font-size: 13px;
+                                line-height: 16px;
+                                padding-top: 10px;
+                                padding-bottom: 10px;
+                            }
+                            .keepstock-section-full {
+                                padding-bottom: 0;
+                            }
+                            .keepstock-section-full-noBox {
+                                padding-bottom: 0;
+                            }
+                            h3.keepstock-headS1 {
+                                font-size: 16px;
+                                line-height: 16px;
+                                font-weight: bold;
+                            }
+                            .keepstock-bread {
+                                padding-left: 0 !important;
+                                padding-bottom: 15px !important;
+                            }
+                            .keepstock-header-title img {
+                                float: left;
+                                margin-top: 2px;
+                                line-height: 45px;
+                                margin-right: 20px;
+                                width: 100%;
+                                height: auto;
+                            }
+                            .keepstock-hero-break {
+                                width: 88%;
+                                margin-top: 10px;
+                            }
+                            .keepstock-headM img {
+                                width: 31px;
+                                margin-right: 10px;
+                            }
+                            h3.keepstock-headS {
+                                font-size: 20px;
+                                line-height: 24px;
+                                padding-bottom: 0 !important
+                            }
+    
+                            .keepstock-card-icon {
+                                width: 10% !important;
+                                float: left;
+                                margin-right: 8px;
+                            }
+                            .keepstock-card-icon1 {
+                                width: 14% !important;
+                                float: left;
+                                margin-right: 8px;
+                            }
+                            .keepstock-iconCard-content {
+                                padding: 15px 20px 25px 20px;
+                            }
+                            .keepstock-card-titleBox {
+                                margin-top: 25px;
+                            }
+    
+                            @media only screen and (min-width: 769px) {
+                                .keepstock-header-title img {
+                                    float: left;
+                                    margin-top: 2px;
+                                    line-height: 45px;
+                                    margin-right: 20px;
+                                    width: 100%;
+                                    height: auto;
+                                }
+                                .keepstock-section-hero {
+                                    height: 300px
+                                }
+                                h2.heroSubTitle{
+                                    font-size: 25px;
+                                }
+                                .keepstock-hero {
+                                    width: 900px;
+                                    height: 300px;
+                                    margin: 0 auto
+                                }
+                                .keepstock-hero-messageFrame {
+                                    width: 300px !important;
+                                }
+                                h2.keepstock-headM {
+                                    font-size: 30px !important;
+                                    font-weight: bold;
+                                    line-height: 36px;
+                                    padding-bottom: 15px;
+                                }
+                                h2.keepstock-headMs {
+                                    font-size: 24px !important;
+                                    font-weight: bold;
+                                    line-height: 28px;
+                                }
+                                p.keepstock-bodyM {
+                                    font-size: 16px;
+                                    line-height: 22px;
+                                }
+                                p.keepstock-bodyM12 {
+                                    font-size: 13px;
+                                    line-height: 14px;
+                                    padding-top: 10px;
+                                    padding-bottom: 10px;
+                                }
+                                .keepstock-section-full {
+                                    padding-bottom: 0;
+                                }
+                                .keepstock-section-full-noBox {
+                                    padding-bottom: 0;
+                                }
+                                .keepstock-iconCard-content {
+                                    padding: 15px 20px 0px 20px;
+                                }
+                                h3.keepstock-headS1 {
+                                    font-size: 16px;
+                                    line-height: 16px;
+                                    font-weight: bold;
+                                }
+                                .keepstock-hero-break {
+                                    width: 88%;
+                                    margin-top: 10px;
+                                }
+                                h3.keepstock-headS {
+                                    font-size: 18px;
+                                    line-height: 22px;
+                                    padding-bottom: 0 !important
+                                }
+                                .keepstock-card-icon {
+                                    width: 10% !important;
+                                    float: left;
+                                    margin-right: 8px;
+                                }
+                                .keepstock-card-icon1 {
+                                    width: 14%;
+                                    float: left;
+                                    margin-right: 8px;
+                                }
+                                .keepstock-iconCard-content {
+                                    padding: 15px 20px 25px 20px;
+                                }
+                                .keepstock-card-titleBox {
+                                    margin-top: 0px;
+                                }
+                            }
+    
+                            @media only screen and (min-width: 1200px) {
+                                .keepstock-section-hero {
+                                    height: 385px
+                                }
+                                .keepstock-hero {
+                                    width: 1100px;
+                                    height: 385px;
+                                    margin: 0 auto
+                                }
+                                .keepstock-hero-messageFrame {
+                                    width: 540px!important;
+                                }
+                                .heroTitle {
+                                    width: 100%;
+                                }
+                                .keepstock-header-title img {
+                                    float: left;
+                                    margin-top: 2px;
+                                    line-height: 45px;
+                                    margin-right: 20px;
+                                    width: 100%;
+                                    height: auto;
+                                }
+                                h2.heroSubTitle{
+                                    font-size: 40px;
+                                }
+    
+                                h2.keepstock-headM {
+                                    font-size: 34px !important;
+                                    font-weight: bold;
+                                    line-height: 36px;
+                                    padding-top: 25px;
+                                }
+    
+                                p.keepstock-bodyM {
+                                    font-size: 18px;
+                                    line-height: 24px;
+                                }
+                                p.keepstock-bodyM12 {
+                                    font-size: 13px;
+                                    line-height: 16px;
+                                    padding-top: 10px;
+                                    padding-bottom: 10px;
+                                }
+                                .keepstock-section-full {
+                                    padding-bottom: 0;
+                                }
+                                .keepstock-section-full-noBox {
+                                    padding-bottom: 0;
+                                }
+                                h3.keepstock-headS1 {
+                                    font-size: 15px;
+                                    line-height: 16px;
+                                    font-weight: bold;
+                                }
+                                h2.keepstock-headMs {
+                                    font-size: 30px !important;
+                                    font-weight: bold;
+                                    line-height: 34px;
+                                }
+                                .keepstock-hero-break {
+                                    width: 88%;
+                                    margin-top: 10px;
+                                }
+                                h3.keepstock-headS {
+                                    font-size: 20px;
+                                    line-height: 24px;
+                                }
+                                .keepstock-card-icon {
+                                    width: 10% !important;
+                                    float: left;
+                                    margin-right: 8px;
+                                }
+                                .keepstock-card-icon1 {
+                                    width: 14%;
+                                    float: left;
+                                    margin-right: 8px;
+                                }
+                                .keepstock-iconCard-content {
+                                    padding: 15px 20px 25px 20px;
+                                }
+                                .keepstock-card-titleBox {
+                                    margin-top: 25px;
+                                }
+                            }
+                            @media only screen and (max-device-width: 480px) {
+                                .keepstock-section-hero {
+                                    width: 100%;
+                                    height: 450px;
+                                    min-width: 100%;
+                                    background-image: url(/medias/sys_master/root/h41/h9c/8962851307550/mobile-banner.jpg);
+                                    background-size: cover;
+                                    background-position: center;
+                                    background-repeat: no-repeat;
+                                    margin-top: -10px
+                                }
+                                .keepstock-hero {
+                                    width: 90%;
+                                    height: 250px;
+                                    padding: 60px 15px 0 15px;
+                                    margin: 0 auto;
+                                }
+                                .keepstock-bread {
+                                    color: #FFFFFF;
+                                    font-size: 12px;
+                                    margin-bottom: 15px
+                                }
+                                .keepstock-bread a {
+                                    color: #10acd2;
+                                    text-decoration: none
+                                }
+                                .keepstock-hero-messageFrame {
+                                    width: 300px
+                                }
+                                .keepstock-header-title {
+                                    padding-left: 5px;
+                                    width: 88%;
+                                    float: left
+                                }
+                                .keepstock-hero h1.heroTitle {
+                                    color: #ffffff;
+                                    font-size: 37px;
+                                    line-height: 35px;
+                                    font-weight: bold;
+                                    margin: 0
+                                }
+                                .keepstock-header-title img {
+                                    width: 100%;
+                                    height: auto;
+                                }
+                                h2.keepstock-headM {
+                                    font-size: 30px !important;
+                                    font-weight: bold;
+                                    line-height: 32px;
+                                    padding-bottom: 10px;
+                                    padding-top: 25px;
+                                    margin: 0 auto;
+                                }
+                                p.keepstock-bodyM {
+                                    font-size: 18px;
+                                    line-height: 24px;
+                                }
+                                p.keepstock-bodyM12 {
+                                    font-size: 14px;
+                                    line-height: 18px;
+                                    padding-top: 5px;
+                                    padding-bottom: 15px;
+                                }
+                                h2.keepstock-headMs {
+                                    font-size: 20px !important;
+                                    font-weight: bold;
+                                    line-height: 26px;
+                                }
+                                h3.keepstock-headS1 {
+                                    font-size: 15px;
+                                    line-height: 20px;
+                                    font-weight: bold;
+                                }
+                                h3.keepstock-headS {
+                                    padding-bottom: 8px;
+                                    margin: 0;
+                                }
+                            }
+                            @media only screen and (max-width: 767px){
+                                h2.heroSubTitle{
+                                    font-size: 20px;
+                                }
+                                p.keepstock-bodyM.keepstock-headPad{
+                                    line-height: 16px;
+                                }
+                                #markRow-servicesUses2 p.keepstock-bodyM, p.keepstock-bodyM12{
+                                    text-align: justify;
+                                }
+                                h2.keepstock-headM{
+                                    font-size: 26px!important;
+                                }
+                                h3.keepstock-headS{
+                                    font-size: 20px;
+                                    line-height: 20px;								
+                                }
+                            }
+                            @media only screen and (min-width: 768px) and (max-width: 1023px){
+                                h2.heroSubTitle{
+                                    font-size: 24px;
+                                }
+                            }
+    
+    @media only screen and (min-width: 769px){
+    .keepstock-graySection {
+        min-width: 100% !important;
+    }
+    }
+    @media only screen and (max-width: 917px){
+    .keepstock-hero {
+        width: 100% !important;
+    }
+    }
+    @media only screen and (max-width: 934px) and (min-width: 770px){
+    .keepstock-5col-hack {
+        width: 22.25% !important;
+    }
+    .markCol-4 {
+        width: 30.9% !important;
+    }
+    }
+    @media only screen and (max-width: 734px){
+    .keepstock-section-hero {
+        min-width: 100% !important;
+    }
+    .keepstock-graySection {
+        min-width: 100% !important;
+    }
+    }
+    @media only screen and (max-width:683px){
+    .keepstock-5col-hack { 
+        width: 100%;
+    }
+    .markCol-4 {
+        width: 100%;
+    }
+    }
+div#action_insert_15847339081372728 > a > img{
+    max-width: 960px;
+    width: 100%;
+}
+</style>
+</p>
+
+<div id="body">
+<div id="main-content">
+<div class="keepstock-section-hero">
+<div class="keepstock-hero">
+<div class="keepstock-hero-messageFrame">
+<p class="keepstock-bread"><a href="/en/" style="padding-right: 5px;color: #fff;">Home</a>|<a href="#" onclick="return false;" style="padding-left: 5px; color: #c3bfbf;">KeepStock Inventory Management</a></p>
+
+<div class="keepstock-section-flex keepstock-section-flexM">
+<div class="keepstock-header-title"><img alt="" src="/medias/sys_master/root/h79/hb1/8962850652190/en-banner-logo.png" /></div>
+
+<div class="keepClear"></div>
+
+<div class="keepstock-hero-break"></div>
+</div>
+
+<h2 class="heroSubTitle">Take Control of Your Stuff</h2>
+
+<p class="heroCopy">Contact your Grainger rep or<br />call 1.888.753.0019</p>
+</div>
+</div>
+</div>
+
+<div class="keepstock-graySection">
+<div class="keepstock-section-full-noBox">
+<h2 class="keepstock-headM"><img alt="" src="/medias/sys_master/root/h21/h8d/8962851373086/redsquare.png" />Inventory managed. Space organized. Time and money saved.</h2>
+
+<div class="keepstock-section-flex" id="markRow-servicesUses2">
+<div class="markCol-12">
+<p class="keepstock-bodyM"><span style="color: #be2122; font-weight: bold">What if there were an easier way to ensure you have the right parts, tools and supplies in the right place right when you need them?</span><br />Put Grainger’s expertise to work for you. It’s almost like managing your stuff — those critical inventory items that keep your operations running — on autopilot. See how Grainger KeepStock Inventory Management solutions and our inventory specialists can help you improve productivity, save money and boost profitability.</p>
+</div>
+</div>
+</div>
+</div>
+
+<div class="keepstock-graySection">
+<div class="keepstock-section-full">
+<h2 class="keepstock-headM keepstock-headPad">Explore Solutions</h2>
+
+<div class="keepstock-section-flex" id="markRow-iconCard">
+<div class="keepstock-5col-hack keepstock-cardComplex-white">
+<div align="center" class="keepstock-iconCard-content"><img alt="" src="/medias/sys_master/root/hc2/h1f/8962850783262/icon-cmi.png" />
+<h3 class="keepstock-headS keepstock-seo-red keepstock-iconCard-textLeft">CMI</h3>
+
+<p class="keepstock-bodyM12 keepstock-iconCard-textLeft">Tools for improved visibility and management of Grainger materials<br /><br /><a aria-label="Learn More about KEEPSTOCK CMI" class="btn btn-secondary" href="/medias/sys_master/root/h75/h72/8962573828126/en-pdf-cmi.pdf" target="_blank">Learn More</a></p>
+</div>
+</div>
+
+<div class="keepstock-5col-hack keepstock-cardComplex-white">
+<div align="center" class="keepstock-iconCard-content"><img alt="" src="/medias/sys_master/root/h9b/h1a/8962850979870/icon-replenish.png" />
+<h3 class="keepstock-headS keepstock-seo-red keepstock-iconCard-textLeft">REPLENISH</h3>
+
+<p class="keepstock-bodyM12 keepstock-iconCard-textLeft">Scheduled visits help ensure the right Grainger materials are kept on hand<br /><br /><a aria-label="Learn More about KEEPSTOCK REPLENISH" class="btn btn-secondary" href="/medias/sys_master/root/he4/h0b/8962573762590/en-pdf-replenish.pdf" target="_blank">Learn More</a></p>
+</div>
+</div>
+
+<div class="keepstock-5col-hack keepstock-cardComplex-white">
+<div align="center" class="keepstock-iconCard-content"><img alt="" src="/medias/sys_master/root/h0c/h95/8962851045406/icon-vending.png" />
+<h3 class="keepstock-headS keepstock-seo-red keepstock-iconCard-textLeft">VENDING</h3>
+
+<p class="keepstock-bodyM12 keepstock-iconCard-textLeft">Control consumption of Grainger material at the point of use<br /><br /><a aria-label="Learn More about KEEPSTOCK VENDING" class="btn btn-secondary" href="/medias/sys_master/root/h65/h69/8962574024734/en-pdf-vending.pdf" target="_blank">Learn More</a></p>
+</div>
+</div>
+
+<div class="keepstock-5col-hack keepstock-cardComplex-white">
+<div align="center" class="keepstock-iconCard-content"><img alt="" src="/medias/sys_master/root/h2f/hc5/8962850914334/icon-onsite.png" />
+<h3 class="keepstock-headS keepstock-seo-red keepstock-iconCard-textLeft">ONSITE</h3>
+
+<p class="keepstock-bodyM12 keepstock-iconCard-textLeft">Dedicated resource with daily presence manages all Grainger materials<br /><br /><a aria-label="Learn More about KEEPSTOCK ONSITE" class="btn btn-secondary" href="/medias/sys_master/root/h81/hbc/8962573959198/en-pdf-onsite.pdf" target="_blank">Learn More</a></p>
+</div>
+</div>
+
+<div class="keepstock-5col-hack keepstock-cardComplex-white">
+<div align="center" class="keepstock-iconCard-content"><img alt="" src="/medias/sys_master/root/ha2/hae/8962850848798/icon-managed.png" />
+<h3 class="keepstock-headS keepstock-seo-red keepstock-iconCard-textLeft">MANAGED</h3>
+
+<p class="keepstock-bodyM12 keepstock-iconCard-textLeft">Specialist provides MRO supply chain expertise and multi-supplier support<br /><br /><a aria-label="Learn More about KEEPSTOCK MANAGED" class="btn btn-secondary" href="/medias/sys_master/root/h9c/h9d/8962573893662/en-pdf-managed.pdf" target="_blank">Learn More</a></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="keepstock-graySection">
+<div class="keepstock-section-full">
+<h2 class="keepstock-headM keepstock-headPad">You’re In Control</h2>
+
+<div class="keepstock-section-flex" id="markRow-servicesUse">
+<div class="markCol-4 keepstock-card-white"><img alt="" class="keepstock-card-image" src="/medias/sys_master/root/h00/h4b/8962851176478/img-inventory.jpg" />
+<div class="keepstock-card-content">
+<div class="keepstock-card-titleBox keepstock-section-flexCenter"><img alt="" class="keepstock-card-icon" src="/medias/sys_master/root/h21/h8d/8962851373086/redsquare.png" />
+<div>
+<h3 class="keepstock-headS1 keepstock-PadClear-bottom">MEET WITH AN INVENTORY EXPERT</h3>
+</div>
+</div>
+
+<div class="keepClear"></div>
+
+<p class="keepstock-bodyM12 keepstock-ctaPad-card">Contact your Grainger rep or talk to one of our inventory management specialists at 1.888.753.0019. We’ll take the time to understand your needs and share solution options.</p>
+</div>
+</div>
+
+<div class="markCol-4 keepstock-card-white"><img alt="" class="keepstock-card-image" src="/medias/sys_master/root/h2e/hd7/8962851242014/img-solution.jpg" />
+<div class="keepstock-card-content">
+<div class="keepstock-card-titleBox keepstock-section-flexCenter"><img alt="" class="keepstock-card-icon" src="/medias/sys_master/root/h21/h8d/8962851373086/redsquare.png" />
+<div>
+<h3 class="keepstock-headS1 keepstock-PadClear-bottom">WE&#39;LL CUSTOMIZE YOUR SOLUTION</h3>
+</div>
+</div>
+
+<div class="keepClear"></div>
+
+<p class="keepstock-bodyM12">Whether you need web-based, do-it-yourself tools or onsite support to manage your inventory for you, we’ll create custom solutions to give you the visibility and control to help keep your business running smoothly.</p>
+</div>
+</div>
+
+<div class="markCol-4 keepstock-card-white "><img alt="" class="keepstock-card-image" src="/medias/sys_master/root/hab/h16/8962851110942/img-installation.jpg" />
+<div class="keepstock-card-content">
+<div class="keepstock-card-titleBox keepstock-section-flexCenter"><img alt="" class="keepstock-card-icon" src="/medias/sys_master/root/h21/h8d/8962851373086/redsquare.png" />
+<div>
+<h3 class="keepstock-headS1 keepstock-PadClear-bottom">WORK WITH OUR INSTALLATION TEAM</h3>
+</div>
+</div>
+
+<div class="keepClear"></div>
+
+<p class="keepstock-bodyM12">From organizing your crib to optimizing your vending setup, our inventory pros work with you to install your unique inventory solutions.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="keepstock-graySection">
+<div class="keepstock-section-full">
+<h2 class="keepstock-headMs keepstock-headPad" style="margin-bottom: 0;"><span style="color: #be2122;"><strong>Contact your Grainger rep or call 1.888.753.0019</strong></span></h2>
+</div>
+</div>
+
+<div class="keepstock-graySection">
+<div class="keepstock-section-full" style="padding-top:0;">
+<div class="keepClear" style="height:15px;"></div>
+
+<p class="keepstock-bodyM keepstock-headPad"><span style="color: #333333; font-size:11px;">Grainger KeepStock solutions are subject to customer eligibility and agreements.</span></p>
+</div>
+
+<div class="keepClear" style="height:35px;"></div>
+</div>
+</div>
+</div>
