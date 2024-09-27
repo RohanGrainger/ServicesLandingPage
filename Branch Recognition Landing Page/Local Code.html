@@ -384,6 +384,16 @@
     #main-content .center-content-one-col .content h1 {
       line-height: 74px !important;
     }
+
+    .cardfontsizes {
+      font-size: 20px !important;
+      line-height: 1 !important;
+    }
+
+    .cardfontsizess {
+      font-size: 18px !important;
+      line-height: 1 !important;
+    }
   }
 
   @media only screen and (max-width: 440px) {
@@ -433,11 +443,17 @@
       display: block !important;
     }
   }
+
+  table,
+  th,
+  td {
+    border: none !important;
+  }
 </style>
 <div
   class="headerImg"
   style="
-    background-image: url(training_banner.png);
+    background-image: url(branch_banner.png);
     background-position: center;
     background-position-y: top;
     background-repeat: no-repeat;
@@ -529,7 +545,7 @@
     <div class="row">
       <div class="col-sm-12">
         <h2
-          class="secondHeader cardfontsize"
+          class="secondHeader cardfontsizes"
           style="
             font-size: 1.2em;
             color: #000000;
@@ -574,7 +590,7 @@
             class="imagedivheight"
           >
             <div class="landing-page-panel-content" style="text-align: left">
-              <h4 class="cardfontsize"><b>Hours of Operation</b></h4>
+              <h4 class="cardfontsizes"><b>Hours of Operation</b></h4>
 
               <table
                 style="width: 100%; max-width: 400px; border-collapse: collapse"
@@ -657,14 +673,23 @@
             class="imagedivheight"
           >
             <div class="landing-page-panel-content" style="text-align: left">
-              <h4 class="cardfontsize"><b>Locate Us</b></h4>
+              <h4 class="cardfontsizes"><b>Locate Us</b></h4>
 
-              <h5 style="font-size: 14px; margin-bottom: 2px !important">
+              <h5
+                class="cardfontsizess"
+                style="font-size: 14px; margin-bottom: 2px !important"
+              >
                 <b>Caledon Branch #ATD</b>
               </h5>
 
-              <p style="font-size: 14px" class="cardfontsize">
-                21 Merchant Rd., Unit 2<br />Caledon ON L7C 3YZ
+              <p
+                style="font-size: 14px; margin-bottom: 0"
+                class="cardfontsizes"
+              >
+                21 Merchant Rd., Unit
+              </p>
+              <p style="font-size: 14px" class="cardfontsizes">
+                2Caledon ON L7C 3YZ
               </p>
             </div>
           </div>
@@ -691,7 +716,7 @@
             class="imagedivheight"
           >
             <div class="landing-page-panel-content" style="text-align: left">
-              <h4 class="cardfontsize"><b>Nearby Branches</b></h4>
+              <h4 class="cardfontsizes"><b>Nearby Branches</b></h4>
 
               <table
                 style="width: 100%; max-width: 400px; border-collapse: collapse"
@@ -831,7 +856,7 @@
             src="tool.png"
             class="card-img-top"
             alt="Environmental Health & Safety Services"
-            style="width: 50px; height: 80px"
+            style="width: 60px; height: 80px"
           />
           <div style="padding: 0; width: 100%">
             <div style="text-align: center; color: white">
@@ -849,7 +874,7 @@
             src="inventory.png"
             class="card-img-top"
             alt="Environmental Health & Safety Services"
-            style="width: 50px; height: 80px"
+            style="width: 60px; height: 80px"
           />
           <div style="padding: 0; width: 100%">
             <div style="text-align: center; color: white">
@@ -902,37 +927,37 @@
   <div class="container" style="padding-left: 3%; padding-right: 3%">
     <div class="row" style="margin-top: 70px; margin-bottom: 45px">
       <div
-      class="col-md-4 col-sm-12 mb-4 d-flex align-items-stretch imageheight"
-      style="padding: 0 5px 0 5px"
-    >
-      <div class="card" style="flex: 1; background: #ffffff">
-        <img
-          src="forthLandingPage.png"
-          class="card-img-top"
-          alt="Environmental Health & Safety Services"
-          style="width: 100%; height: auto; object-fit: cover"
-        />
-        <div
-          style="
-            padding: 0;
-            width: 100%;
-            border: 1px solid #dddddd;
-            height: 200px;
-          "
-          class="imagedivheight"
-        >
-          <div class="landing-page-panel-content" style="text-align: left">
-            <h4 class="cardfontsize"><b>Electrical Safety</b></h4>
+        class="col-md-4 col-sm-12 mb-4 d-flex align-items-stretch imageheight"
+        style="padding: 0 5px 0 5px"
+      >
+        <div class="card" style="flex: 1; background: #ffffff">
+          <img
+            src="forthLandingPage.png"
+            class="card-img-top"
+            alt="Environmental Health & Safety Services"
+            style="width: 100%; height: auto; object-fit: cover"
+          />
+          <div
+            style="
+              padding: 0;
+              width: 100%;
+              border: 1px solid #dddddd;
+              height: 200px;
+            "
+            class="imagedivheight"
+          >
+            <div class="landing-page-panel-content" style="text-align: left">
+              <h4 class="cardfontsizes"><b>Grainger Services</b></h4>
 
-            <p style="font-size: 16px" class="cardfontsize">
-              This fully NFPA 70E-21 and OSHA compliant ESTS Electrical Safety
-              Arc Flash & Shock course was developed for workers who perform
-              energized electrical work.
-            </p>
+              <p style="font-size: 16px" class="cardfontsizes">
+                With our team of certified technicians and through our network
+                of qualified, insured and licensed service providers, we can
+                provide your business with comprehensive solutions.
+              </p>
+            </div>
           </div>
         </div>
       </div>
-    </div>
       <div
         class="col-md-4 col-sm-12 mb-4 d-flex align-items-stretch imageheight"
         style="padding: 0 5px 0 5px"
@@ -954,12 +979,14 @@
             class="imagedivheight"
           >
             <div class="landing-page-panel-content" style="text-align: left">
-              <h4 class="cardfontsize"><b>Electrical Safety</b></h4>
+              <h4 class="cardfontsizes">
+                <b>KeepStock Inventory Management</b>
+              </h4>
 
-              <p style="font-size: 16px" class="cardfontsize">
-                This fully NFPA 70E-21 and OSHA compliant ESTS Electrical Safety
-                Arc Flash & Shock course was developed for workers who perform
-                energized electrical work.
+              <p style="font-size: 16px" class="cardfontsizes">
+                Discover how our keepStock Inventory Management solutions and
+                our inventory specialists can help you improve productivity,
+                save money and boost profitability.
               </p>
             </div>
           </div>
@@ -986,12 +1013,12 @@
             class="imagedivheight"
           >
             <div class="landing-page-panel-content" style="text-align: left">
-              <h4 class="cardfontsize"><b>Ground Disturbance</b></h4>
+              <h4 class="cardfontsizes"><b>Manufacturing</b></h4>
 
-              <p style="font-size: 16px" class="cardfontsize">
-                Get the industry-recognized Ground Disturbance online course
-                from Danatec and Global Training Centre to meet all Ground
-                Disturbance certification requirements!
+              <p style="font-size: 16px" class="cardfontsizes">
+                Run a smooth manufacturing facility with Grainger's products and
+                solutions. Balance the safety and productivity of your employees
+                and the ongoing maintenance and improvement of the facility.
               </p>
             </div>
           </div>
@@ -1000,6 +1027,7 @@
     </div>
   </div>
 </div>
+
 <!-- Testing -->
 <!--/Analytics Code for Service Now content page-->
 <script type="text/javascript">
