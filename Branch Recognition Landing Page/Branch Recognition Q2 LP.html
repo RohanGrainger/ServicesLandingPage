@@ -174,6 +174,8 @@
     .cardsizeheight {
       height: 100px !important;
     }
+
+   
   }
 
   @media only screen and (max-width: 440px) {
@@ -409,6 +411,14 @@
       margin-top: 0px !important;
       margin-bottom: 0px !important;
     }
+
+    .hourstext{
+      padding-right: 114px !important;
+    }
+
+    .closedtext{
+      padding-right: 112px !important;
+    }
   }
 
   @media only screen and (max-width: 440px) {
@@ -463,12 +473,14 @@
   th,
   td {
     border: none !important;
-    padding: 0 !important;
+    padding: 0;
   }
 
   table th:first-child {
     padding-bottom: 5px !important;
   }
+
+
 </style>
 <div
   class="headerImg"
@@ -637,11 +649,11 @@
             "
             class="imagedivheight"
           >
-            <div class="landing-page-panel-content" style="text-align: left">
+            <!-- <div class="landing-page-panel-content" style="text-align: left">
               <h4 style="margin-bottom: 14px;" class="cardfontsizes"><b>Hours of Operation</b></h4>
 
               <table
-                style="width: 100%; max-width: 400px; border-collapse: collapse"
+                style="width: 100%; border-collapse: collapse"
               >
                 <thead>
                   <tr>
@@ -651,6 +663,7 @@
                         text-align: left;
                         font-weight: bold;
                         font-size: 14px;
+                     
                       "
                     >
                       Day
@@ -661,6 +674,7 @@
                         text-align: left;
                         font-weight: bold;
                         font-size: 14px;
+                        align-self: right;
                       "
                     >
                       Hours
@@ -698,7 +712,62 @@
                   </tr>
                 </tbody>
               </table>
+
+              
+            </div> -->
+            <div class="landing-page-panel-content" style="text-align: left">
+              <h4 style="margin-bottom: 14px;" class="cardfontsizes"><b>Hours of Operation</b></h4>
+            
+              <table style="width: 100%; border-collapse: collapse">
+                <thead>
+                  <tr>
+                    <th
+                      class="cardfontsizess"
+                      style="text-align: left; font-weight: bold; font-size: 14px"
+                    >
+                      Day
+                    </th>
+                    <th
+                      class="cardfontsizess hourstext"
+                      style="text-align: right; font-weight: bold; font-size: 14px; padding-right: 88px;"
+                    >
+                      Hours
+                    </th>
+                  </tr>
+                </thead>
+                <tbody class="cardfontsizess">
+                  <tr>
+                    <td class="cardfontsizess" style="padding: 0; font-size: 14px;">Monday</td>
+                    <td class="cardfontsizess" style="padding: 0; font-size: 14px; text-align: right;">8:00 a.m. - 4:30 p.m.</td>
+                  </tr>
+                  <tr>
+                    <td class="cardfontsizess" style="padding: 0; font-size: 14px;">Tuesday</td>
+                    <td class="cardfontsizess" style="padding: 0; font-size: 14px; text-align: right;">8:00 a.m. - 4:30 p.m.</td>
+                  </tr>
+                  <tr>
+                    <td class="cardfontsizess" style="padding: 0; font-size: 14px;">Wednesday</td>
+                    <td class="cardfontsizess" style="padding: 0; font-size: 14px; text-align: right;">8:00 a.m. - 4:30 p.m.</td>
+                  </tr>
+                  <tr>
+                    <td class="cardfontsizess" style="padding: 0; font-size: 14px;">Thursday</td>
+                    <td class="cardfontsizess" style="padding: 0; font-size: 14px; text-align: right;">8:00 a.m. - 4:30 p.m.</td>
+                  </tr>
+                  <tr>
+                    <td class="cardfontsizess" style="padding: 0; font-size: 14px;">Friday</td>
+                    <td class="cardfontsizess" style="padding: 0; font-size: 14px; text-align: right;">8:00 a.m. - 4:30 p.m.</td>
+                  </tr>
+                  <tr>
+                    <td class="cardfontsizess" style="padding: 0; font-size: 14px;">Saturday</td>
+                    <td class="cardfontsizess closedtext" style="padding: 0; padding-right: 88px; font-size: 14px; text-align: right;">Closed</td>
+                  </tr>
+                  <tr>
+                    <td class="cardfontsizess" style="padding: 0; font-size: 14px;">Sunday</td>
+                    <td class="cardfontsizess closedtext" style="padding: 0; padding-right: 88px; font-size: 14px; text-align: right;">Closed</td>
+                  </tr>
+                </tbody>
+              </table>
             </div>
+            
           </div>
         </div>
       </div>
